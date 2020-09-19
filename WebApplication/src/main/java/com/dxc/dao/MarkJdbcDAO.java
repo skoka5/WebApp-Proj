@@ -26,10 +26,10 @@ public class MarkJdbcDAO extends JdbcDAO implements DAO<Mark> {
 		PreparedStatement pstmt = con.prepareStatement("INSERT INTO mark VALUES(?,?,?,?,?)");
 		pstmt.setInt(1, e.getId());
 		pstmt.setString(2, e.getName());
-		pstmt.setInt(3, e.getSub1());
-		pstmt.setInt(4, e.getSub2());
-		pstmt.setInt(5, e.getSub3());
-		pstmt.setInt(6, e.getTotal());
+		pstmt.setString(3, e.getSub1());
+		pstmt.setString(4, e.getSub2());
+		pstmt.setString(5, e.getSub3());
+		pstmt.setString(6, e.getTotal());
 		
 		if(1== pstmt.executeUpdate()) {
 			res = true;
@@ -43,10 +43,10 @@ public class MarkJdbcDAO extends JdbcDAO implements DAO<Mark> {
     boolean res = false;
 		PreparedStatement pstmt = con.prepareStatement("UPDATE mark SET name=?, sub1=?,sub2=?,sub3=?,total=? WHERE id = ?");
 		pstmt.setString(1, e.getName());
-		pstmt.setInt(3, e.getSub1());
-		pstmt.setInt(4, e.getSub2());
-		pstmt.setInt(5, e.getSub3());
-		pstmt.setInt(6, e.getTotal());	
+		pstmt.setString(3, e.getSub1());
+		pstmt.setString(4, e.getSub2());
+		pstmt.setString(5, e.getSub3());
+		pstmt.setString(6, e.getTotal());	
 		pstmt.setInt(4, e.getId());
 		
 		if(1 == pstmt.executeUpdate()) {
@@ -83,10 +83,10 @@ public class MarkJdbcDAO extends JdbcDAO implements DAO<Mark> {
 			ResultSet rs = pstmt.executeQuery();
 			if(rs.next()) {
 				String name = rs.getString(2);
-				int sub1 = rs.getInt(3);
-				int sub2 = rs.getInt(4);
-				int sub3 = rs.getInt(5);
-				int total = rs.getInt(6);
+				String sub1 = rs.getString(3);
+				String sub2 = rs.getString(4);
+				String sub3 = rs.getString(5);
+				String total = rs.getString(6);
 			
 				mark = new Mark(id, name,sub1,sub2,sub3,total);
 			}
@@ -109,10 +109,10 @@ public class MarkJdbcDAO extends JdbcDAO implements DAO<Mark> {
 			while(rs.next()) {
 				int id = rs.getInt("id");
 				String name = rs.getString("name");
-				int sub1 = rs.getInt("sub1");
-				int sub2 = rs.getInt("sub2");
-				int sub3 = rs.getInt("sub3");
-				int total = rs.getInt("total");
+				String sub1 = rs.getString("sub1");
+				String sub2 = rs.getString("sub2");
+				String sub3 = rs.getString("sub3");
+				String total = rs.getString("total");
 				
 				Mark mark = new Mark(id, name, sub1,sub2,sub3,total);
 				marks.add(mark);

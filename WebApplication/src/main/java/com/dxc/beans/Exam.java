@@ -3,6 +3,7 @@ package com.dxc.beans;
 public class Exam {
 	int eid;
 	String ename;
+	
 	public Exam() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -10,6 +11,11 @@ public class Exam {
 	public Exam(int eid, String ename) {
 		super();
 		this.eid = eid;
+		this.ename = ename;
+	}
+	
+	public Exam(String ename) {
+		super();
 		this.ename = ename;
 	}
 	public int getEid() {

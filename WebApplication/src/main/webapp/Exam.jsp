@@ -26,12 +26,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+<center>
 <h1>Exam Details</h1>
 		<table border="2">
 			<tr>
 				<td>Exam Id</td>
 				<td>Exam Name</td>
-				<td>Actions</td>
+				
 				</tr>
 			<%
 				try {
@@ -45,12 +46,9 @@
 			<tr>
 				<td><%=resultSet.getInt("eid")%></td>
 				<td><%=resultSet.getString("ename")%></td>
-				<td>
-                        <a href="/edit?id=<c:out value='${book.id}' />">Edit</a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/delete?id=<c:out value='${book.id}' />">Delete</a>                     
-                </td>
+				
 			</tr>
+			</center>
 
 			<%
 				}
@@ -62,6 +60,10 @@
 		</table>
 		<br></br>
 		<a href="AddExam.jsp">Add New Exam Details</a><br>
+		<br>
+		<a href="EdiExam">Edit Exam Details</a><br>
+		<br>
+		<a href="DelExam">Delete Exam</a><br>
 		<br>
 		<a href="Link.jsp">Home</a>
 </body>

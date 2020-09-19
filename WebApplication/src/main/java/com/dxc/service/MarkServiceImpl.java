@@ -4,24 +4,25 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.text.ParseException;
-
 import java.util.List;
 
-import com.dxc.beans.Student;
-import com.dxc.dao.StudentJdbcDAO;
+import com.dxc.beans.Mark;
 
-public class StudentServiceImpl implements StudentService {
+import com.dxc.dao.MarkJdbcDAO;
+
+
+public class MarkServiceImpl implements MarkService {
 
 	@SuppressWarnings("finally")
 	@Override
-	public boolean save(Student student) {
+	public boolean save(Mark mark) {
 		// TODO Auto-generated method stub
 		boolean res = false;
 		try {
-			StudentJdbcDAO studentJdbcDAO = new StudentJdbcDAO();
-		    res = studentJdbcDAO.save(student);
+			MarkJdbcDAO markJdbcDAO = new MarkJdbcDAO();
+		    res = markJdbcDAO.save(mark);
 			if(res) {
-				studentJdbcDAO.save();
+				markJdbcDAO.save();
 			}
 			
 		} catch (FileNotFoundException e) {
@@ -40,15 +41,15 @@ public class StudentServiceImpl implements StudentService {
 		finally {
 			return res;
 		}
-		
 	}
 
 	@Override
-	public Student find(int id) {
-		Student student = null;
+	public Mark find(int id) {
+		// TODO Auto-generated method stub
+		Mark mark = null;
 		try {
-			StudentJdbcDAO studentJdbcDAO = new StudentJdbcDAO();
-			student = studentJdbcDAO.find(id);
+			MarkJdbcDAO markJdbcDAO = new MarkJdbcDAO();
+			mark = markJdbcDAO.find(id);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -64,16 +65,20 @@ public class StudentServiceImpl implements StudentService {
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		return student;
+		return mark;
 	}
 
 	@Override
-	public List<Student> findAll() {
-		List<Student> students=null;
+	public List<Mark> findAll() {
+		// TODO Auto-generated method stub
+		List<Mark> marks=null;
 		try {
-			StudentJdbcDAO studentJdbcDAO = new StudentJdbcDAO();
-			students = studentJdbcDAO.findAll();
+			MarkJdbcDAO markJdbcDAO = new MarkJdbcDAO();
+			marks = markJdbcDAO.findAll();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -89,18 +94,22 @@ public class StudentServiceImpl implements StudentService {
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		return students;
+		return marks;
 	}
 
 	@Override
-	public boolean update(Student student) {
+	public boolean update(Mark mark) {
+		// TODO Auto-generated method stub
 		boolean res = false;
 		try {
-			StudentJdbcDAO studentJdbcDAO = new StudentJdbcDAO();
-			res = studentJdbcDAO.edit(student);
+			MarkJdbcDAO markJdbcDAO = new MarkJdbcDAO();
+			res = markJdbcDAO.edit(mark);
 			if(res) {
-				studentJdbcDAO.save();
+				markJdbcDAO.save();
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -112,19 +121,24 @@ public class StudentServiceImpl implements StudentService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return false;
 	}
 
-	public  boolean delete(int id) {
+	@Override
+	public boolean delete(int id) {
+		// TODO Auto-generated method stub
 		boolean res = false;
 		try {
-			StudentJdbcDAO studentJdbcDAO = new StudentJdbcDAO();
-			res = studentJdbcDAO.delete(id);
+			MarkJdbcDAO markJdbcDAO = new MarkJdbcDAO();
+			res = markJdbcDAO.delete(id);
 			if(res) {
-				studentJdbcDAO.save();
+				markJdbcDAO.save();
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -136,6 +150,9 @@ public class StudentServiceImpl implements StudentService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

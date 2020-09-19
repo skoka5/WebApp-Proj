@@ -60,4 +60,4 @@ e.printStackTrace();
 }
 %>
 <br></br>
-<h2>Click <a href="Stud.jsp">here</a> to go back</h2>
+<h4>Click <a href="Stud.jsp">here</a> to go back</h4>

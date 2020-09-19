@@ -3,126 +3,114 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-<absolute-ordering/>
-  <display-name>Archetype Created Web Application</display-name>
+<display-name>Archetype Created Web Application</display-name>
   <servlet>
   	<servlet-name>LoginVal</servlet-name>
   	<display-name>LoginVal</display-name>
   	<description></description>
   	<servlet-class>com.dxc.servlet.LoginVal</servlet-class>
   </servlet>
-  <servlet>
-  	<servlet-name>StudentOper</servlet-name>
-  	<display-name>StudentOper</display-name>
-  	<description></description>
-  	<servlet-class>com.dxc.servlet.StudentOper</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>DeleteStudent</servlet-name>
-  	<display-name>DeleteStudent</display-name>
-  	<description></description>
-  	<servlet-class>com.dxc.servlet.DeleteStudent</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>StudentServlet</servlet-name>
-  	<display-name>StudentServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.dxc.servlet.StudentServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>DeleteStu</servlet-name>
-  	<display-name>DeleteStu</display-name>
-  	<description></description>
-  	<servlet-class>com.dxc.servlet.DeleteStudent</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>DeleStud</servlet-name>
-  	<display-name>DeleStud</display-name>
-  	<description></description>
-  	<servlet-class>com.dxc.servlet.DeleStud</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>Dlete</servlet-name>
-  	<display-name>Dlete</display-name>
-  	<description></description>
-  	<servlet-class>com.dxc.servlet.Dlete</servlet-class>
-  </servlet>
+
+
+
+
   <servlet>
   	<servlet-name>Logout</servlet-name>
   	<display-name>Logout</display-name>
   	<description></description>
   	<servlet-class>com.dxc.servlet.Logout</servlet-class>
   </servlet>
+
+
+
+
   <servlet>
-  	<servlet-name>StudentService</servlet-name>
-  	<display-name>StudentService</display-name>
+  	<servlet-name>DelStu</servlet-name>
+  	<display-name>DelStu</display-name>
   	<description></description>
-  	<servlet-class>com.dxc.service.StudentService</servlet-class>
+  	<servlet-class>com.dxc.servlet.DelStu</servlet-class>
+  </servlet>
+
+  <servlet>
+  	<servlet-name>EdiStu</servlet-name>
+  	<display-name>EdiStu</display-name>
+  	<description></description>
+  	<servlet-class>com.dxc.servlet.EdiStu</servlet-class>
+  </servlet>
+
+  <servlet>
+  	<servlet-name>EdiExam</servlet-name>
+  	<display-name>EdiExam</display-name>
+  	<description></description>
+  	<servlet-class>com.dxc.servlet.EdiExam</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>StudentServe</servlet-name>
-  	<display-name>StudentServe</display-name>
+  	<servlet-name>DelExam</servlet-name>
+  	<display-name>DelExam</display-name>
   	<description></description>
-  	<servlet-class>com.dxc.servlet.StudentServe</servlet-class>
+  	<servlet-class>com.dxc.servlet.DelExam</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>DeleteStudentServlet</servlet-name>
-  	<display-name>DeleteStudentServlet</display-name>
+  	<servlet-name>DelMark</servlet-name>
+  	<display-name>DelMark</display-name>
   	<description></description>
-  	<servlet-class>com.dxc.servlet.DeleteStudentServlet</servlet-class>
+  	<servlet-class>com.dxc.servlet.DelMark</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>StudServ</servlet-name>
-  	<display-name>StudServ</display-name>
+  	<servlet-name>EdiMark</servlet-name>
+  	<display-name>EdiMark</display-name>
   	<description></description>
-  	<servlet-class>com.dxc.servlet.StudServ</servlet-class>
+  	<servlet-class>com.dxc.servlet.EdiMark</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserRegistration</servlet-name>
+  	<display-name>UserRegistration</display-name>
+  	<description></description>
+  	<servlet-class>com.dxc.servlet.UserRegistration</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>LoginVal</servlet-name>
   	<url-pattern>/LoginVal</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>StudentOper</servlet-name>
-  	<url-pattern>/StudentOper</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>DeleteStudent</servlet-name>
-  	<url-pattern>/DeleteStudent</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>StudentServlet</servlet-name>
-  	<url-pattern>/StudentServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>DeleteStu</servlet-name>
-  	<url-pattern>/DeleteStu</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>DeleStud</servlet-name>
-  	<url-pattern>/delestud</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>Dlete</servlet-name>
-  	<url-pattern>/Dlete</url-pattern>
-  </servlet-mapping>
+
+
+
+
+
   <servlet-mapping>
   	<servlet-name>Logout</servlet-name>
   	<url-pattern>/logout</url-pattern>
   </servlet-mapping>
+
+
   <servlet-mapping>
-  	<servlet-name>StudentService</servlet-name>
-  	<url-pattern>/StudentService</url-pattern>
+  	<servlet-name>DelStu</servlet-name>
+  	<url-pattern>/DelStu</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+  	<servlet-name>EdiStu</servlet-name>
+  	<url-pattern>/EdiStu</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>StudentServe</servlet-name>
-  	<url-pattern>/StudentServe</url-pattern>
+  	<servlet-name>EdiExam</servlet-name>
+  	<url-pattern>/EdiExam</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>DeleteStudentServlet</servlet-name>
-  	<url-pattern>/DeleteStudentServlet</url-pattern>
+  	<servlet-name>DelExam</servlet-name>
+  	<url-pattern>/DelExam</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>StudServ</servlet-name>
-  	<url-pattern>/StudServ</url-pattern>
+  	<servlet-name>DelMark</servlet-name>
+  	<url-pattern>/DelMark</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EdiMark</servlet-name>
+  	<url-pattern>/EdiMark</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserRegistration</servlet-name>
+  	<url-pattern>/UserRegistration</url-pattern>
+  </servlet-mapping>
+
 </web-app>

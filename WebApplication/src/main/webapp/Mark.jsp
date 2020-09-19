@@ -25,6 +25,7 @@
 <title>Marks</title>
 </head>
 <body>
+<center>
 <h1>Marks</h1>
 		<table border="2">
 			<tr>
@@ -34,7 +35,7 @@
 				<td>Sub2</td>
 				<td>Sub3</td>
 				<td>Total</td>
-				<td>Actions</td>
+				
 
 			</tr>
 			<%
@@ -53,12 +54,9 @@
 				<td><%=resultSet.getInt("sub2")%></td>
 				<td><%=resultSet.getInt("sub3")%></td>
 				<td><%=resultSet.getInt("total")%></td>
-				<td>
-                        <a href="/edit?id=<c:out value='${book.id}' />">Edit</a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/delete?id=<c:out value='${book.id}' />">Delete</a>                     
-                </td>
+
 			</tr>
+			</center>
 
 			<%
 				}
@@ -69,7 +67,12 @@
 			%>
 		</table>
 		<br></br>
-		<a href="AddMark.jsp">Add New Student Marks </a>
-		
+		<a href="AddMark.jsp">Add New Student Marks </a><br>
+		<br>
+		<a href="EdiMark">Edit Student Marks </a><br>
+		<br>
+		<a href="DelMark">Delete Student Marks </a><br>
+		<br>
+		<a href="Link.jsp">Home</a>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
@@ -23,7 +23,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-	
+	<center>
 		<h1>Student Details</h1>
 		<table border="2">
 			<tr>
@@ -31,10 +31,10 @@
 				<td>Name</td>
 				<td>Email</td>
 				<td>Mobile</td>
-				<td>Actions</td>
+
 
 			</tr>
-	<%
+			<%
 				try {
 					connection = DriverManager.getConnection(url, un, pw);
 					statement = connection.createStatement();
@@ -42,29 +42,29 @@
 					resultSet = statement.executeQuery(sql);
 					while (resultSet.next()) {
 			%>
-			
+
 			<tr>
-			
+
 				<td><%=resultSet.getInt("id")%></td>
 				<td><%=resultSet.getString("name")%></td>
 				<td><%=resultSet.getString("email")%></td>
 				<td><%=resultSet.getString("mobile")%></td>
-				<td>
-				<td><a href="StudServ" >delete</a>
-			</tr>
-			 
-            <%
+         </tr>
+			</center>
+
+			<%
 				}
 					connection.close();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			%>
-			
+
 		</table>
-		<br></br>
-		<a href="AddStudent.jsp">Add New Student Details</a>
-		
+		<br></br> <a href="AddStudent.jsp">Add New Student Details</a><br>
+		<br> <a href="EdiStu">Edit Student Details</a><br> <br>
+		<a href="DelStu">Delete Existing Student</a><br> <br> <a
+			href="Link.jsp">Home</a>
 </body>
 </html>
 

@@ -19,10 +19,24 @@ public class UserJdbcDao extends JdbcDAO implements DAO<User> {
 	}
 
 	@Override
-	public boolean save(User e) throws Exception {
+	public boolean save(User user) throws Exception {
 		// TODO Auto-generated method stub
-		return false;
+		boolean res = false;
+
+		PreparedStatement pstmt = con.prepareStatement("insert into user values(?,?)");
+		pstmt.setString(2, user.getUsername());
+		pstmt.setString(1, user.getPassword());
+		int n = pstmt.executeUpdate();
+		con.commit();
+		if (n == 1) {
+			res = true;
+		}
+
+		return res;
+
+		
 	}
+	
 
 	@Override
 	public boolean edit(User e) throws Exception {
